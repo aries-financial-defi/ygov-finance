@@ -19,7 +19,12 @@ import Store from "../../stores";
 const emitter = Store.emitter;
 const store = Store.store;
 
+const logoImgHeader = require('../../assets/logo/ARIES FINANCIAL LONG LOGO.1(Gold).png');
+
 const styles = theme => ({
+	languages: {
+		margin: "0 20px",
+	},
 	root: {
 		verticalAlign: 'top',
 		width: '100%',
@@ -44,38 +49,37 @@ const styles = theme => ({
 		}
 	},
 	icon: {
-		display: 'flex',
 		alignItems: 'center',
+		cursor: 'pointer',
 		flex: 1,
-		cursor: 'pointer'
+		display: "flex",
+	},
+	linksContainer: {
+		textAlign: "center",
 	},
 	links: {
-		display: 'flex'
+		display: "flex",
 	},
 	link: {
-		padding: '12px 0px',
-		margin: '0px 12px',
+		margin: "0px 10px",
+		paddingBottom: "5px",
+		textAlign: "center",
 		cursor: 'pointer',
 		'&:hover': {
-			paddingBottom: '9px',
 			borderBottom: "3px solid "+colors.borderBlue,
 		},
+	},
+	linkActive: {
+		borderBottom: "3px solid "+colors.borderBlue,
 	},
 	title: {
 		textTransform: 'capitalize'
 	},
-	linkActive: {
-		padding: '12px 0px',
-		margin: '0px 12px',
-		cursor: 'pointer',
-		paddingBottom: '9px',
-		borderBottom: "3px solid "+colors.borderBlue,
-	},
 	account: {
+		flex: 1,
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'flex-end',
-		flex: 1,
 		[theme.breakpoints.down('sm')]: {
 			flex: '0'
 		}
@@ -98,6 +102,10 @@ const styles = theme => ({
 			border: "1px solid "+colors.borderBlue,
 			background: colors.white
 		}
+	},
+	walletTitle: {
+		flex: 1,
+		color: colors.darkGray
 	},
 	connectedDot: {
 		background: colors.compoundGreen,
@@ -166,11 +174,17 @@ class Header extends Component {
   				<div className={ classes.icon }>
   					<img
   						alt=""
-  						src={ require('../../assets/YFI-logo.png') }
+  						src={ logoImgHeader }
   						height={ '40px' }
   						onClick={ () => { this.nav(''); } }
   					/>
-  					<Typography variant={ 'h3'} className={ classes.name } onClick={ () => { this.nav(''); } } id="header.header.Text.1" >{i18next.t('header.header.Text.1')}</Typography>
+					<div className={classes.languages}>
+						{Object.keys(i18nKeys).map(currentLang=><img
+							style={{width:"35px", height:"30px", cursor: "pointer", margin: "0 5px", border: getI18n().language === currentLang ? "1px solid rgb(245,204,91)" : "1px solid rgb(174,174,174,0.4)",  boxShadow: getI18n().language === currentLang ? "3px 3px 2px rgb(245,204,91)" : ""}}
+							src={ require(`../../assets/nationalFlag/${currentLang}.jpg`) }
+							onClick={ () => this.changI18nLanguage(currentLang) }
+						/>)}
+					</div>
   				</div>
   				<div className={ classes.links }>
   					{ this.renderLink('staking') }

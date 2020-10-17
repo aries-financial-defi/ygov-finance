@@ -24,6 +24,8 @@ import BuildIcon from '@material-ui/icons/Build';
 import Store from "../../stores";
 const store = Store.store;
 
+const logoImgFooter = require('../../assets/logo/ARIES FINANCIAL ROUND LOGO(Gold).png');
+
 const styles = theme => ({
 	footer: {
 		padding: '24px',
@@ -115,7 +117,7 @@ class Footer extends Component {
 					<Typography className={ classes.builtHeading } variant={ 'h6'} id="footer.footer.Text.1" >{i18next.t('footer.footer.Text.1')}</Typography>
 					<img
 						alt=""
-						src={ require('../../assets/YFI-logo.png') }
+						src={ logoImgFooter }
 						height={ '120px' }
 						width={ '120px' }
 					/>
