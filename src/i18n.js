@@ -33,5 +33,10 @@ i18n
       escapeValue: false // react already safes from xss
     }
   });
-
+const i18nKeys = Object.keys(resources).reduce((obj,key)=>{
+    obj[key]=key;
+    return obj;
+}, {});
+console.log(i18nKeys)
+export { i18nKeys };
 export default i18n;
