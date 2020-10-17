@@ -189,14 +189,14 @@ class Header extends Component {
 					</div>
   				</div>
   				<div className={ classes.links }>
-  					{ this.renderLink('staking') }
-  					{ this.renderLink('vote') }
+					{ this.renderLink("header.header.Text.3","staking",i18next.t('header.header.Text.3')) }
+					{ this.renderLink("header.header.Text.4","vote",i18next.t('header.header.Text.4')) }
   				</div>
   				<div className={ classes.account }>
   					{ address &&
               <Typography variant={ 'h4'} className={ classes.walletAddress } noWrap onClick={this.addressClicked} >
               	{ address }
-              	<div className={ classes.connectedDot }></div>
+              	<div className={ classes.connectedDot }/>
               </Typography>
   					}
   					{ !address &&
@@ -209,16 +209,15 @@ class Header extends Component {
   	);
   }
 
-  renderLink = (screen) => {
+  renderLink = (id, screen, desc) => {
   	const {
   		classes
   	} = this.props;
-
   	return (
-  		<div className={ (window.location.pathname==='/'+screen || (window.location.pathname==='/stake' && screen==='staking')  || (window.location.pathname==='/propose' && screen==='vote') )?classes.linkActive:classes.link } onClick={ () => { this.nav(screen); } }>
-  			<Typography variant={'h4'} className={ `title` }>{ screen }</Typography>
+  		<div id={id} className={ `${classes.link} ${(window.location.pathname==='/'+screen) && classes.linkActive}` } onClick={ () => { this.nav(screen); } }>
+			<Typography variant={'h4'} className={ `title` }>{ desc }</Typography>
   		</div>
-  	);
+	);
   }
 
   nav = (screen) => {
