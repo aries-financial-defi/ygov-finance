@@ -16,6 +16,8 @@ import {
 import UnlockModal from '../unlock/unlockModal.jsx';
 
 import Store from "../../stores";
+import {i18nKeys} from "../../i18n";
+import {getI18n} from "react-i18next";
 const emitter = Store.emitter;
 const store = Store.store;
 
@@ -235,6 +237,11 @@ class Header extends Component {
   	return (
   		<UnlockModal closeModal={ this.closeModal } modalOpen={ this.state.modalOpen } />
   	);
+  }
+
+  changI18nLanguage = (i18nKey) => {
+  	i18next.changeLanguage(i18nKey);
+  	this.setState({});
   }
 }
 
