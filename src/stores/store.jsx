@@ -110,7 +110,7 @@ class Store {
       ],
       claimableAsset: {
         id: 'yfi',
-        name: 'yearn.finance',
+        name: 'ARIES GOV FINANCIAL',
         address: config.yfiAddress,
         abi: config.yfiABI,
         symbol: 'YFI',
@@ -194,7 +194,7 @@ class Store {
         {
           id: 'FeeRewards',
           name: 'Fee Rewards',
-          website: 'ygov.finance',
+          website: 'ARIES GOV FINANCIAL',
           link: 'https://ygov.finance/',
           depositsEnabled: false,
           tokens: [
@@ -217,7 +217,7 @@ class Store {
         {
           id: 'GovernanceV2',
           name: 'Governance V2',
-          website: 'ygov.finance',
+          website: 'ARIES GOV FINANCIAL',
           link: 'https://ygov.finance/',
           depositsEnabled: true,
           tokens: [

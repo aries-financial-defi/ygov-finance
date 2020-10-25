@@ -1,4 +1,4 @@
-//i18n => {"footer.footer.Text.1":"ygov.finance","footer.footer.Text.2":"Products","footer.footer.Text.3":"yearn.finance","footer.footer.Text.4":"ygov.finance","footer.footer.Text.5":"yinsure.finance","footer.footer.Text.6":"yborrow.finance","footer.footer.Text.7":"docs.yearn.finance","footer.footer.Text.8":"Community","footer.footer.Text.9":"ycosystem.info","footer.footer.Text.10":"learnyearn.finance","footer.footer.Text.11":"stats.finance","footer.footer.Text.12":"yieldfarming.info","footer.footer.Text.13":"yearn.snapshot.page","footer.footer.Text.14":"Socials","footer.footer.Text.15":"Twitter","footer.footer.Text.16":"Medium","footer.footer.Text.17":"Discord","footer.footer.Text.18":"Telegram","footer.footer.Text.19":"Github"}
+//i18n => {"footer.footer.Text.1":"ygov.finance","footer.footer.Text.2":"Products","footer.footer.Text.3":"ARIES GOV FINANCIAL","footer.footer.Text.4":"ygov.finance","footer.footer.Text.5":"yinsure.finance","footer.footer.Text.6":"yborrow.finance","footer.footer.Text.7":"docs.ARIES GOV FINANCIAL","footer.footer.Text.8":"Community","footer.footer.Text.9":"ycosystem.info","footer.footer.Text.10":"learnyearn.finance","footer.footer.Text.11":"stats.finance","footer.footer.Text.12":"yieldfarming.info","footer.footer.Text.13":"yearn.snapshot.page","footer.footer.Text.14":"Socials","footer.footer.Text.15":"Twitter","footer.footer.Text.16":"Medium","footer.footer.Text.17":"Discord","footer.footer.Text.18":"Telegram","footer.footer.Text.19":"Github"}
 import i18next from "i18next";
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
@@ -136,42 +136,42 @@ class Footer extends Component {
 						<SecurityIcon height='15px' className={ classes.icon } />
 						<Typography variant={ 'h4'}  id="footer.footer.Text.5" >{i18next.t('footer.footer.Text.5')}</Typography>
 					</div>
-					<div  className={ classes.link } onClick={()=> window.open("https://yborrow.finance", "_blank")} >
-						<MonetizationOnIcon height='15px' className={ classes.icon } />
-						<Typography variant={ 'h4'}  id="footer.footer.Text.6" >{i18next.t('footer.footer.Text.6')}</Typography>
-					</div>
+					{/*<div  className={ classes.link } onClick={()=> window.open("https://yborrow.finance", "_blank")} >*/}
+					{/*	<MonetizationOnIcon height='15px' className={ classes.icon } />*/}
+					{/*	<Typography variant={ 'h4'}  id="footer.footer.Text.6" >{i18next.t('footer.footer.Text.6')}</Typography>*/}
+					{/*</div>*/}
 					<div  className={ classes.link } onClick={()=> window.open("https://docs.yearn.finance", "_blank")} >
 						<DescriptionIcon height='15px' className={ classes.icon } />
 						<Typography variant={ 'h4'}  id="footer.footer.Text.7" >{i18next.t('footer.footer.Text.7')}</Typography>
 					</div>
 				</div>
-				<div className={ classes.community }>
-					<Typography className={ classes.heading } variant={ 'h6'} id="footer.footer.Text.8" >{i18next.t('footer.footer.Text.8')}</Typography>
-					<div  className={ classes.link } onClick={()=> window.open("https://ycosystem.info", "_blank")} >
-						<DescriptionIcon height='15px' className={ classes.icon } />
-						<Typography variant={ 'h4'}  id="footer.footer.Text.9" >{i18next.t('footer.footer.Text.9')}</Typography>
-					</div>
-					<div  className={ classes.link } onClick={()=> window.open("https://www.learnyearn.finance", "_blank")}>
-						<DescriptionIcon height='15px' className={ classes.icon } />
-						<Typography variant={ 'h4'}  id="footer.footer.Text.10" >{i18next.t('footer.footer.Text.10')}</Typography>
-					</div>
-					<div  className={ classes.link } onClick={()=> window.open("https://stats.finance/yearn", "_blank")} >
-						<BarChartIcon height='15px' className={ classes.icon } />
-						<Typography variant={ 'h4'}  id="footer.footer.Text.11" >{i18next.t('footer.footer.Text.11')}</Typography>
-					</div>
-					<div  className={ classes.link } onClick={()=> window.open("https://yieldfarming.info", "_blank")} >
-						<BarChartIcon height='15px' className={ classes.icon } />
-						<Typography variant={ 'h4'}  id="footer.footer.Text.12" >{i18next.t('footer.footer.Text.12')}</Typography>
-					</div>
-					<div  className={ classes.link } onClick={()=> window.open("https://feel-the-yearn.app", "_blank")} >
-						<BarChartIcon height='15px' className={ classes.icon } />
-						<Typography variant={ 'h4'} >feel-the-yearn.app</Typography>
-					</div>
-					<div  className={ classes.link } onClick={()=> window.open("https://yearn.snapshot.page", "_blank")} >
-						<ForumIcon height='15px' className={ classes.icon } />
-						<Typography variant={ 'h4'}  id="footer.footer.Text.13" >{i18next.t('footer.footer.Text.13')}</Typography>
-					</div>
-				</div>
+				{/*<div className={ classes.community }>*/}
+				{/*	<Typography className={ classes.heading } variant={ 'h6'} id="footer.footer.Text.8" >{i18next.t('footer.footer.Text.8')}</Typography>*/}
+				{/*	<div  className={ classes.link } onClick={()=> window.open("https://ycosystem.info", "_blank")} >*/}
+				{/*		<DescriptionIcon height='15px' className={ classes.icon } />*/}
+				{/*		<Typography variant={ 'h4'}  id="footer.footer.Text.9" >{i18next.t('footer.footer.Text.9')}</Typography>*/}
+				{/*	</div>*/}
+				{/*	<div  className={ classes.link } onClick={()=> window.open("https://www.learnyearn.finance", "_blank")}>*/}
+				{/*		<DescriptionIcon height='15px' className={ classes.icon } />*/}
+				{/*		<Typography variant={ 'h4'}  id="footer.footer.Text.10" >{i18next.t('footer.footer.Text.10')}</Typography>*/}
+				{/*	</div>*/}
+				{/*	<div  className={ classes.link } onClick={()=> window.open("https://stats.finance/yearn", "_blank")} >*/}
+				{/*		<BarChartIcon height='15px' className={ classes.icon } />*/}
+				{/*		<Typography variant={ 'h4'}  id="footer.footer.Text.11" >{i18next.t('footer.footer.Text.11')}</Typography>*/}
+				{/*	</div>*/}
+				{/*	<div  className={ classes.link } onClick={()=> window.open("https://yieldfarming.info", "_blank")} >*/}
+				{/*		<BarChartIcon height='15px' className={ classes.icon } />*/}
+				{/*		<Typography variant={ 'h4'}  id="footer.footer.Text.12" >{i18next.t('footer.footer.Text.12')}</Typography>*/}
+				{/*	</div>*/}
+				{/*	<div  className={ classes.link } onClick={()=> window.open("https://feel-the-yearn.app", "_blank")} >*/}
+				{/*		<BarChartIcon height='15px' className={ classes.icon } />*/}
+				{/*		<Typography variant={ 'h4'} >feel-the-yearn.app</Typography>*/}
+				{/*	</div>*/}
+				{/*	<div  className={ classes.link } onClick={()=> window.open("https://yearn.snapshot.page", "_blank")} >*/}
+				{/*		<ForumIcon height='15px' className={ classes.icon } />*/}
+				{/*		<Typography variant={ 'h4'}  id="footer.footer.Text.13" >{i18next.t('footer.footer.Text.13')}</Typography>*/}
+				{/*	</div>*/}
+				{/*</div>*/}
 				<div className={ classes.socials }>
 					<Typography className={ classes.heading } variant={ 'h6'} id="footer.footer.Text.14" >{i18next.t('footer.footer.Text.14')}</Typography>
 					<div  className={ classes.link } onClick={()=> window.open("https://twitter.com/iearnfinance", "_blank")} >
